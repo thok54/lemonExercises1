@@ -1,62 +1,71 @@
-nav {
-  padding: 1em;
-  font-family: Verdana, Geneva, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  border-radius: 3px;
-  border-style: groove;
-  min-height: 90vh;
+@import "init.scss";
+@import "layout.scss";
 
+body {
+  font-family: sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  min-height: 100vh;
 }
 
-nav uul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: pink;
-  display: flex;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 8px;
-  display: flex;
-}
-
-nav li a {
-  color: black;
-  display: block;
-  text-decoration: none;
-  padding: 0.5em 1em;
-}
-
-nav ul li a {
-  border-radius: 3px;
-  border-style: groove;
-}
-
-nav ul li a:hover {
-  background: tomato;
-  color: white;
-}
-
-nav uul li a:hover {
-  background: yellow;
-  color: black;
-}
-
-nav li {
+.main-display {
   flex-grow: 1;
-  text-align: center;
 }
 
-@media (max-width: 660px) {
-  .lemonCode {
-    display: none;
+.ContentA {
+  grid-area: ContentA;
+  background-color: yellow;
+}
+
+.ContentB {
+  grid-area: ContentB;
+  background-color: blue;
+}
+
+ul {
+  background-color: pink;
+  grid-area: pinky;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 85rem) {
+  .main-content {
+    @include full-resolution;
+    justify-content: center;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 84.9rem) and (min-width: 65rem) {
+  .main-content {
+    @include large-resolution;
+
+    ul {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 64.9rem) and (min-width: 48rem) {
+  .main-content {
+    @include medium-resolution;
+
+    ul {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 47.9rem) {
+  .main-content {
+    @include small-resolution;
+
+    ul {
+      justify-content: flex-start;
+    }
   }
 }

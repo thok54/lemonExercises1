@@ -1,0 +1,45 @@
+@mixin base-grid-definition {
+  display: grid;
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+}
+
+@mixin full-resolution {
+  @include base-grid-definition();
+
+  grid-template-areas:
+    "pinky ContentA ContentA"
+    "pinky ContentB ContentB";
+  grid-template-columns: 20rem 20rem 20rem;
+  grid-template-rows: 50vh 50vh;
+}
+
+@mixin large-resolution {
+  @include base-grid-definition();
+
+  grid-template-areas:
+    "pinky ContentA ContentA"
+    "pinky ContentB ContentB";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+}
+
+@mixin medium-resolution {
+  @include base-grid-definition();
+  grid-template-areas:
+    "pinky"
+    "ContentA"
+    "ContentB";
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 40vh 40vh;
+}
+
+@mixin small-resolution {
+  @include base-grid-definition();
+  grid-template-areas:
+    "pinky"
+    "ContentA"
+    "ContentB";
+  grid-template-columns: 1fr;
+  grid-template-rows: 6vh 47vh 47vh;
+}

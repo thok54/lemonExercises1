@@ -6,10 +6,6 @@ nav {
   border-radius: 3px;
   border-style: groove;
   min-height: 90vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 nav uul {
@@ -55,7 +51,12 @@ nav li {
   text-align: center;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .lemonCode {
     display: none;
   }
