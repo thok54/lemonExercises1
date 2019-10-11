@@ -1,0 +1,62 @@
+nav {
+  padding: 1em;
+  font-family: Verdana, Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 3px;
+  border-style: groove;
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav uul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: pink;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 8px;
+  display: flex;
+}
+
+nav li a {
+  color: black;
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+nav ul li a {
+  border-radius: 3px;
+  border-style: groove;
+}
+
+nav ul li a:hover {
+  background: tomato;
+  color: white;
+}
+
+nav uul li a:hover {
+  background: yellow;
+  color: black;
+}
+
+nav li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+@media (max-width: 660px) {
+  .lemonCode {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+//Comment out whichever theme you wana use, and comment the one you are not using.
+
+@import "_themeA.scss";
+//@import "_themeB.scss";
+
+.Base {
+  @include paletteBox;
+  background-color: shading($base-color, n);
+}
+
+.Important {
+  @include paletteBox;
+  background-color: shading($base-color, d3);
+}
+
+.Warning {
+  @include paletteBox;
+  background-color: shading($base-color, l4);
+}
+
+.Secondary_font {
+  font-style: $Secondary-font;
+}
+
+.Box_with_shadow {
+  @include paletteBox;
+  box-shadow: $shadowForBox;
+}

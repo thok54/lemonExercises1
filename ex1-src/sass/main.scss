@@ -1,0 +1,52 @@
+@import "_colorPalet.scss";
+
+$base-color: #00a4ff;
+
+body {
+  display: flex;
+}
+
+.BaseColor {
+  @include paletteBox;
+  background-color: shading($base-color, n);
+}
+
+.Lighten1 {
+  @include paletteBox;
+  background-color: shading($base-color, l1);
+}
+
+.Lighten2 {
+  @include paletteBox;
+  background-color: shading($base-color, l2);
+}
+
+.Lighten3 {
+  @include paletteBox;
+  background-color: shading($base-color, l3);
+}
+
+.Lighten4 {
+  @include paletteBox;
+  background-color: shading($base-color, l4);
+}
+
+.Darken1 {
+  @include paletteBox;
+  background-color: shading($base-color, d1);
+}
+
+.Darken2 {
+  @include paletteBox;
+  background-color: shading($base-color, d2);
+}
+
+.Darken3 {
+  @include paletteBox;
+  background-color: shading($base-color, d3);
+}
+
+.Darken4 {
+  @include paletteBox;
+  background-color: shading($base-color, d4);
+}
